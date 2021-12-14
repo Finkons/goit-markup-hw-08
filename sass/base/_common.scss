@@ -6,8 +6,12 @@
     @extend %animation;
   }
   .section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    @media screen and (min-width: 1200px){
     padding-top: 94px;
     padding-bottom: 94px;
+    }
   }
   
   .section.no-padding {
@@ -17,11 +21,4 @@
   .section-title {
     margin-top: 0;
     margin-bottom: 50px;
-  }
-  .container {
-    width: 1200px;
-    padding-left: 15px;
-    padding-right: 15px;
-    margin-left: auto;
-    margin-right: auto;
   }
