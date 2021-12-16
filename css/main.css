@@ -275,7 +275,6 @@ label, .link, .button, .footer-address__item--link:hover, .footer-address__item-
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
-  width: 480px;
 }
 
 @media screen and (min-width: 480px) {
@@ -292,7 +291,7 @@ label, .link, .button, .footer-address__item--link:hover, .footer-address__item-
 
 @media screen and (min-width: 1200px) {
   .container {
-    min-width: 1200px;
+    width: 1200px;
   }
 }
 
@@ -498,12 +497,12 @@ label {
 }
 
 .hero {
-  display: block;
   width: 480px;
   height: 400px;
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/Hero.jpeg);
-  background-color: var(--background-gray);
+  margin-left: 0;
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/heromob.jpg");
   background-position: center;
+  background-color: var(--background-gray);
   background-size: cover;
   background-repeat: no-repeat;
   text-align: center;
@@ -511,21 +510,41 @@ label {
   margin: 0 auto;
 }
 
+@media screen and (min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
+  .hero .hero {
+    background-image: url("../images/hero/heromob2x.jpg");
+  }
+}
+
 @media screen and (min-width: 768px) {
   .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/herortab.jpg");
     text-align: center;
-    width: 768px;
+    max-width: 768px;
     height: 400px;
+  }
+}
+
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .hero .hero {
+    background-image: url("../images/hero/herortab2x.jpg");
   }
 }
 
 @media screen and (min-width: 1200px) {
   .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/deskImg.jpg");
     height: 600px;
-    width: 1600px;
+    max-width: 1600px;
     padding: 200px 0;
     text-align: center;
     background-color: var(--background-gray);
+  }
+}
+
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .hero .hero {
+    background-image: url("../images/hero/deskImg2x.jpg");
   }
 }
 
