@@ -16,6 +16,7 @@
 .feature-item {
   display: block;
   height: 226px;
+  margin-bottom: 30px;
   @media screen and (min-width: 768px) and (max-width: 1199px) {
     max-width: 354px;
     height: 251px;
@@ -23,13 +24,14 @@
     margin-bottom: 30px;
     box-sizing: border-box;
     background: var(--primary-color-white);
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+    &:nth-last-child(-n + 2) {
+      margin-bottom: 0;
+    }
   }
-  &:nth-child(2n) {
-    margin-right: 0;
-  }
-  &:nth-last-child(-n + 2) {
-    margin-bottom: 0;
-}
+  
     
   
   @media screen and (min-width: 1200px) {

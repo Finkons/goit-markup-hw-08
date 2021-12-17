@@ -1,6 +1,7 @@
 .header {
     border-bottom: 1px solid #ececec;
     max-width: 1600px;
+    margin: 0 auto;
 }
 .header-contact__icon--phone {
     margin-right: 10px;
@@ -14,17 +15,29 @@
     fill: currentColor;
   }
   .header-contact {
-    display: flex;
+    // display: flex;
     margin-left: auto;
     align-items: center;
+    @media screen and (min-width:1200px){
+      display: flex;
+    }
   }
   
   .header-contact__link {
     display: flex;
     align-items: center;
     justify-content: center;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.2;
+    padding: 5px;
+    letter-spacing: 0.02em;
+    @media screen and (min-width:1200px){
     padding-top: 32px;
     padding-bottom: 32px;
+    font-size: 14px;
+    }
+    
     color: var(--title-text-color);
     &:hover,
     &:focus {
@@ -47,3 +60,11 @@
     padding-left: 15px;
     padding-right: 15px;
   }
+@media screen and (max-width:767px) {
+.header-nav__list{
+display: none;
+  }
+.header-contact{
+  display: none;
+} 
+}
