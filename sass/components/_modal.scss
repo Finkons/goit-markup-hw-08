@@ -12,8 +12,12 @@
 
 .modal {
   position: absolute;
-  min-width: 528px;
-  min-height: 581px;
+  width: 450px;
+  height: auto;
+  @media screen and (min-width: 1200px){
+    width: 528px;
+    height: auto;
+  } 
   padding: 40px;
   top: 50%;
   left: 50%;
@@ -151,7 +155,10 @@
 }
 
 .modal-checkbox__text {
-  font-size: 14px;
+  font-size: 12px;
+  @media screen and (min-width: 1200px){
+    font-size: 14px;
+  } 
   line-height: 1.71;
   letter-spacing: 0.03em;
   margin-right: 4px;
@@ -159,7 +166,10 @@
 }
 
 .modal-checkbox__link {
-  font-size: 14px;
+  font-size: 12px;
+  @media screen and (min-width: 1200px){
+    font-size: 14px;
+  } 
   line-height: 1.71;
   letter-spacing: 0.03em;
   text-decoration-line: underline;

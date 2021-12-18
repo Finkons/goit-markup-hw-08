@@ -266,7 +266,7 @@ summary {
   --background-gray: #2f303a;
 }
 
-label, .link, .button, .footer-address__item--link:hover, .footer-address__item--link:focus, .footer-form__input, .footer-form__button, .card-text, .backdrop, .modal, .modal-button, .modal-button__icon, .modal-form__field--input, .modal-form__field--input + .modal-form__field--icon, .modal-textarea, .modal-checkbox__icon {
+label, .link, .button, .footer-address__item--link:hover, .footer-address__item--link:focus, .footer-form__input, .footer-form__button, .card-text, .backdrop, .modal, .modal-button, .modal-button__icon, .modal-form__field--input, .modal-form__field--input + .modal-form__field--icon, .modal-textarea, .modal-checkbox__icon, .menu-container, .menu-container.is-open, .menu-toggle svg {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -445,6 +445,7 @@ label {
 }
 
 .header-contact {
+  display: block;
   margin-left: auto;
   align-items: center;
 }
@@ -489,6 +490,7 @@ label {
 
 .header-box {
   display: flex;
+  position: relative;
   align-items: center;
   justify-self: start;
   margin: auto;
@@ -1307,8 +1309,8 @@ address {
 
 .modal {
   position: absolute;
-  min-width: 528px;
-  min-height: 581px;
+  width: 450px;
+  height: auto;
   padding: 40px;
   top: 50%;
   left: 50%;
@@ -1317,6 +1319,13 @@ address {
   transform: translate(-50%, -50%) scale(1) rotate3d(1, 1, 1, 0deg);
   background: var(--primary-color-white);
   transform-origin: 150px 150px;
+}
+
+@media screen and (min-width: 1200px) {
+  .modal {
+    width: 528px;
+    height: auto;
+  }
 }
 
 .is-hidden {
@@ -1436,19 +1445,31 @@ address {
 }
 
 .modal-checkbox__text {
-  font-size: 14px;
+  font-size: 12px;
   line-height: 1.71;
   letter-spacing: 0.03em;
   margin-right: 4px;
   color: var(--title-text-color);
 }
 
+@media screen and (min-width: 1200px) {
+  .modal-checkbox__text {
+    font-size: 14px;
+  }
+}
+
 .modal-checkbox__link {
-  font-size: 14px;
+  font-size: 12px;
   line-height: 1.71;
   letter-spacing: 0.03em;
   text-decoration-line: underline;
   color: var(--accent-color);
+}
+
+@media screen and (min-width: 1200px) {
+  .modal-checkbox__link {
+    font-size: 14px;
+  }
 }
 
 .form-button {
@@ -1486,5 +1507,130 @@ address {
   background-color: var(--accent-color);
   background-size: contain;
   background-origin: border-box;
+}
+
+.menu-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding: 40px;
+  z-index: 10;
+  background-color: var(--primary-color-white);
+  transform: translateY(-100%);
+}
+
+.menu-container.is-open {
+  transform: translateY(0);
+}
+
+.menu-toggle {
+  position: absolute;
+  right: 0;
+  min-height: 40px;
+  min-width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+.menu-toggle svg:hover {
+  fill: var(--accent-color);
+}
+
+@media screen and (min-width: 768px) {
+  .menu-toggle {
+    display: none;
+  }
+}
+
+.menu-container__link {
+  padding-bottom: 32px;
+  display: block;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.18;
+  letter-spacing: 0.02em;
+  color: currentColor;
+  color: var(--primary-text-color #212121);
+}
+
+.menu-container__link:hover {
+  color: var(--accent-color);
+}
+
+.contact__item--tel {
+  color: currentColor;
+  color: var(--accent-color);
+  padding-top: auto;
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 1.12px;
+  letter-spacing: 0.02em;
+  margin-top: 300px;
+}
+
+.menu-container__contact {
+  position: absolute;
+  display: block;
+  bottom: 134px;
+}
+
+.contact__item--mail {
+  display: block;
+  margin-top: 32px;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.12px;
+  letter-spacing: 0.02em;
+  color: currentColor;
+  color: var(--title-text-color);
+}
+
+.contact__item--mail:hover {
+  color: var(--accent-color);
+}
+
+.menu-container__social-list {
+  position: absolute;
+  display: flex;
+  max-width: 357px;
+  margin-top: 64px;
+  left: 40px;
+  bottom: 48px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.22;
+  letter-spacing: 0.02em;
+  margin-left: -10px;
+}
+
+.menu-container__social-item a {
+  color: currentColor;
+  color: var(--accent-color);
+  margin: 0 10px;
+}
+
+.menu-container__social-item span {
+  width: 22px;
+  height: 0px;
+  left: 135px;
+  top: 726px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  transform: rotate(90deg);
+}
+
+.menu-container .menu-toggle {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  color: #fff;
 }
 /*# sourceMappingURL=main.css.map */
