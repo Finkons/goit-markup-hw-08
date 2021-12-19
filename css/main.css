@@ -291,7 +291,7 @@ label, .link, .button, .footer-address__item--link:hover, .footer-address__item-
 
 @media screen and (min-width: 1200px) {
   .container {
-    min-width: 1200px;
+    width: 1200px;
   }
 }
 
@@ -461,7 +461,7 @@ label {
   align-items: center;
   justify-content: center;
   font-weight: 500;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.2;
   padding: 5px;
   letter-spacing: 0.02em;
@@ -493,6 +493,7 @@ label {
   position: relative;
   align-items: center;
   justify-self: start;
+  margin: 0 auto;
   margin: auto;
   height: 80px;
   padding-left: 15px;
@@ -506,12 +507,13 @@ label {
   .header-contact {
     display: none;
   }
+  .header-box {
+    height: 60px;
+  }
 }
 
 .header-nav__logo {
   display: block;
-  padding-top: 32px;
-  padding-bottom: 32px;
   font-family: Raleway;
   font-weight: bold;
   font-size: 25px;
@@ -525,12 +527,10 @@ label {
 
 .hero {
   display: flex;
-  justify-self: center;
-  width: 480px;
-  height: 400px;
+  max-width: 480px;
+  background-color: var(--background-gray);
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/heromob.jpg");
   background-position: center;
-  background-color: var(--background-gray);
   background-size: cover;
   background-repeat: no-repeat;
   text-align: center;
@@ -540,21 +540,21 @@ label {
 
 @media screen and (min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
   .hero .hero {
-    background-image: url("../images/hero/heromob2x.jpg");
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/heromob2x.jpg");
   }
 }
 
 @media screen and (min-width: 768px) {
   .hero {
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)) url("../images/hero/Headrtab.jpg");
-    width: 768px;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)) url("../images/hero/herotab.jpg");
+    max-width: 768px;
     margin: 0 auto;
   }
 }
 
 @media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
   .hero .hero {
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)) url("../images/hero/Headrtab2x.jpg");
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)) url("../images/hero/herotab2x.jpg");
   }
 }
 
@@ -562,7 +562,7 @@ label {
   .hero {
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/deskimg.jpg");
     height: 600px;
-    width: 1600px;
+    max-width: 1600px;
     padding: 200px 0;
     margin: 0 auto;
   }
@@ -577,7 +577,7 @@ label {
 .hero-titel {
   display: inline-block;
   text-align: center;
-  width: 360px;
+  max-width: 360px;
   height: 84px;
   font-weight: 900;
   font-size: 26px;
@@ -592,7 +592,7 @@ label {
 
 @media screen and (min-width: 1200px) {
   .hero-titel {
-    width: 696px;
+    max-width: 696px;
     height: 120px;
     font-weight: 900;
     font-size: 44px;
@@ -604,11 +604,8 @@ label {
   display: block;
   padding: 10px, 32px;
   cursor: pointer;
-  margin: 0 auto;
   width: 200px;
   height: 50px;
-  left: 700px;
-  top: 430px;
   font-weight: bold;
   font-size: 15px;
   line-height: 2;
@@ -618,6 +615,7 @@ label {
   background: var(--accent-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
+  margin: 0 auto;
 }
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
@@ -812,6 +810,7 @@ label {
   .team__list-item {
     width: 270px;
     height: 428px;
+    margin-bottom: 0;
   }
   .team__list-item:nth-last-child(-n + 3) {
     margin-left: 30px;
@@ -985,8 +984,10 @@ address {
 @media screen and (min-width: 768px) and (min-width: 1200px) {
   .footer-address {
     display: flex;
+    justify-content: space-between;
     align-items: baseline;
     padding-top: 72px;
+    padding-left: -15px;
   }
   .footer-address .footer-address {
     display: flex;
@@ -998,6 +999,7 @@ address {
   }
   .footer-address .footer-form {
     margin-left: 93px;
+    text-align: start;
   }
   .footer-address .footer-address__list {
     text-align: left;
@@ -1008,7 +1010,7 @@ address {
     align-items: center;
   }
   .footer-address .footer-form__input {
-    width: 343px;
+    width: 358px;
   }
   .footer-address button {
     margin: 0 0 0 12px;
@@ -1225,11 +1227,14 @@ address {
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .portfolio-gallery__list-item {
     width: 354px;
-    height: 404px;
+    height: 440px;
     margin-right: 30px;
     margin-bottom: 30px;
     box-sizing: border-box;
     background: var(--primary-color-white);
+  }
+  .portfolio-gallery__list-item .card-title {
+    height: 146px;
   }
   .portfolio-gallery__list-item:nth-child(2n) {
     margin-right: 0;
@@ -1242,7 +1247,6 @@ address {
 @media screen and (min-width: 1200px) {
   .portfolio-gallery__list-item {
     width: 370px;
-    height: 404px;
     margin-right: 30px;
     margin-bottom: 30px;
     box-sizing: border-box;
@@ -1321,7 +1325,7 @@ address {
   transform-origin: 150px 150px;
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 767px) {
   .modal {
     width: 528px;
     height: auto;
@@ -1517,6 +1521,7 @@ address {
   height: 100vh;
   padding: 40px;
   z-index: 10;
+  margin: 0 auto;
   background-color: var(--primary-color-white);
   transform: translateY(-100%);
 }
@@ -1527,7 +1532,7 @@ address {
 
 .menu-toggle {
   position: absolute;
-  right: 0;
+  right: 23px;
   min-height: 40px;
   min-width: 40px;
   display: flex;

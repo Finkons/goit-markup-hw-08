@@ -28,7 +28,7 @@
     align-items: center;
     justify-content: center;
     font-weight: 500;
-    font-size: 12px;
+    font-size: 14px;
     line-height: 1.2;
     padding: 5px;
     letter-spacing: 0.02em;
@@ -56,6 +56,7 @@
     position: relative;
     align-items: center;
     justify-self: start;
+    margin: 0 auto;
     margin: auto;
     height: 80px;
     padding-left: 15px;
@@ -68,4 +69,7 @@ display: none;
 .header-contact{
   display: none;
 } 
+.header-box{
+  height: 60px;
+}
 }
