@@ -51,7 +51,7 @@
     color: currentColor;
     color: var(--primary-text-color #212121);
     &:hover {
-     color: var(--accent-color);
+    color: var(--accent-color);
       }
   }
   .contact__item--tel{
@@ -59,10 +59,13 @@
     color: var(--accent-color);
     padding-top: auto;
     font-weight: 500;
-    font-size: 34px;
+    font-size: 8vw;
     line-height: 1.12px;
     letter-spacing: 0.02em;
     margin-top: 300px;
+    @media screen and (min-width:480px) and (max-width:768px){
+      font-size: 34px;
+    }
   }
   .menu-container__contact{
     position: absolute;
@@ -73,13 +76,16 @@
     display: block;
     margin-top: 32px;
     font-weight: 500;
-    font-size: 24px;
+    font-size: 6vw;
     line-height: 1.12px;
     letter-spacing: 0.02em;
     color: currentColor;
     color: var(--title-text-color);
     &:hover {
       color: var(--accent-color);
+      }
+      @media screen and (min-width:480px) and (max-width:768px){
+        font-size: 26px;
       }
   }
   .menu-container__social-list {
@@ -90,10 +96,13 @@
     left: 40px;
     bottom: 48px;
     font-weight: 500;
-    font-size: 16px;
+    font-size: 4vw;
     line-height: 1.22;
     letter-spacing: 0.02em;
     margin-left:-10px;
+    @media screen and (min-width:480px) and (max-width:768px){
+      font-size: 16px;
+    }
   }
   .menu-container__social-item {
     a{
