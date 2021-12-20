@@ -19,30 +19,37 @@
   flex-direction: column;
   justify-content: space-between;
   overflow: hidden;
-  @media screen and (max-width: 480px){
+  @media screen and (max-width: 480px) {
     width: 90vw;
     height: 90vh;
     overflow-y: scroll;
     padding: 20px;
     .modal-checkbox__text {
-      font-size: 11px;}
-      .modal-checkbox__link {
-        font-size: 11px;}
-        .modal-form__title{
-          font-size: 19px;
-        }
-  } 
-  @media screen and (min-width: 767px){
+      font-size: 11px;
+    }
+    .modal-checkbox__link {
+      font-size: 11px;
+    }
+    .modal-form__title {
+      font-size: 19px;
+    }
+    .modal-checkbox__icon {
+      display: inline-block;
+      width: 13px;
+      height: 13px;
+    }
+  }
+  @media screen and (min-width: 767px) {
     width: 528px;
     height: auto;
-  } 
+  }
   padding: 40px;
   top: 50%;
   left: 50%;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   transform: translate(-50%, -50%) scale(1) rotate3d(1, 1, 1, 0deg);
-  
+
   @extend %animation;
   background: var(--primary-color-white);
   transform-origin: 150px 150px;
@@ -116,8 +123,6 @@
   }
 }
 
-
-
 .modal-form__field--label {
   font-size: 12px;
   line-height: 1.16;
@@ -157,9 +162,9 @@
   outline: none;
   @extend %animation;
   &:hover,
-&:focus {
-  border: 1px solid var(--accent-color);
-}
+  &:focus {
+    border: 1px solid var(--accent-color);
+  }
 }
 
 .modal-textarea::placeholder {
@@ -179,9 +184,9 @@
 
 .modal-checkbox__text {
   font-size: 12px;
-  @media screen and (min-width: 1200px){
+  @media screen and (min-width: 1200px) {
     font-size: 14px;
-  } 
+  }
   line-height: 1.71;
   letter-spacing: 0.03em;
   margin-right: 4px;
@@ -190,9 +195,9 @@
 
 .modal-checkbox__link {
   font-size: 12px;
-  @media screen and (min-width: 1200px){
+  @media screen and (min-width: 1200px) {
     font-size: 14px;
-  } 
+  }
   line-height: 1.71;
   letter-spacing: 0.03em;
   text-decoration-line: underline;
@@ -231,6 +236,7 @@
   .modal-checkbox__input:checked + & {
     cursor: pointer;
     border-color: transparent;
+    background-repeat: no-repeat;
     background-image: url("../images/svg/icon-check.svg");
     background-color: var(--accent-color);
     background-size: contain;
