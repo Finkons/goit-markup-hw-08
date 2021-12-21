@@ -54,6 +54,10 @@
     color: var(--accent-color);
   }
 }
+.menu-container__link--active{
+color: var(--accent-color);
+}
+
 .contact__item--tel {
   color: currentColor;
   color: var(--accent-color);

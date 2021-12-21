@@ -560,7 +560,7 @@ label {
 
 @media screen and (min-width: 1200px) {
   .hero {
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/deskimg.jpg");
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/deskImg.jpg");
     height: 600px;
     max-width: 1600px;
     padding: 200px 0;
@@ -570,7 +570,7 @@ label {
 
 @media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
   .hero .hero {
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)) url("../images/hero/deskimg2x.jpg");
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)) url("../images/hero/deskImg2x.jpg");
   }
 }
 
@@ -688,6 +688,7 @@ label {
 }
 
 .feature-title {
+  text-align: center;
   font-weight: bold;
   font-size: 14px;
   line-height: 1.1;
@@ -695,6 +696,12 @@ label {
   text-transform: uppercase;
   margin-top: 0;
   margin-bottom: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .feature-title {
+    text-align: left;
+  }
 }
 
 .feature-paragraph {
@@ -1272,7 +1279,7 @@ address {
   left: 0;
   bottom: 0;
   width: 100%;
-  padding: 63px 24px;
+  padding: 77px 24px;
   letter-spacing: 0.03em;
   background: rgba(33, 150, 243, 0.9);
   color: var(--primary-color-white);
@@ -1281,6 +1288,33 @@ address {
 
 .card-link:hover .card-text {
   transform: translateY(0);
+}
+
+@media screen and (min-width: 768px) {
+  .card-text {
+    padding: 49px 24px;
+  }
+}
+
+@media screen and (max-width: 424px) {
+  .card-text {
+    font-size: 4vw;
+    padding: 55px 24px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .card-text {
+    font-size: 4vw;
+    padding: 45px 24px;
+  }
+}
+
+@media screen and (max-width: 330px) {
+  .card-text {
+    font-size: 4vw;
+    padding: 45px 24px;
+  }
 }
 
 .card-title__name {
@@ -1601,6 +1635,10 @@ address {
 }
 
 .menu-container__link:hover {
+  color: var(--accent-color);
+}
+
+.menu-container__link--active {
   color: var(--accent-color);
 }
 

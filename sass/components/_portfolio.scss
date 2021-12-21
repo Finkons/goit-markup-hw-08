@@ -91,7 +91,8 @@
     left: 0;
     bottom: 0;
     width: 100%;
-    padding: 63px 24px;
+    padding: 77px 24px;
+    
     letter-spacing: 0.03em;
     background: rgba(33, 150, 243, 0.9);
     color: var(--primary-color-white);
@@ -100,9 +101,25 @@
     .card-link:hover & {
       transform: translateY(0);
     }
+    @media screen and (min-width: 768px){
+      padding: 49px 24px;
+    }
+    
+    @media screen and (max-width: 424px){
+      font-size: 4vw;
+      padding: 55px 24px;
+    }
+    @media screen and (max-width: 360px){
+      font-size: 4vw;
+      padding: 45px 24px;
+    }
+    @media screen and (max-width: 330px){
+      font-size: 4vw;
+      padding: 45px 24px;
+    }
   }
   
- 
+
   .card-title__name {
     font-weight: bold;
     font-size: 18px;
