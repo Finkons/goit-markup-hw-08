@@ -34,7 +34,7 @@
   }
 
   @media screen and (min-width: 1200px) {
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/deskImg.jpg");
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/deskimg_new.jpg");
     height: 600px;
     max-width: 1600px;
     padding: 200px 0;
@@ -44,7 +44,7 @@
       screen and (min-resolution: 2dppx) {
       .hero {
         background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4))
-          url("../images/hero/deskImg2x.jpg");
+          url("../images/hero/deskimg_new2x.jpg");
       }
     }
   }
