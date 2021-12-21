@@ -9,16 +9,17 @@
   text-align: center;
   padding: 118px 0;
   margin: 0 auto;
-  
+
   @media screen and (min-device-pixel-ratio: 2),
     screen and (min-resolution: 192dpi),
     screen and (min-resolution: 2dppx) {
     .hero {
-      background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/heromob2x.jpg");
+      background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url("../images/hero/heromob2x.jpg");
     }
   }
   @media screen and (min-width: 768px) {
-    background-image:linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)) url("../images/hero/herotab.jpg");
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)) url("../images/hero/herotab.jpg");
     max-width: 768px;
     // height: 400px;
     margin: 0 auto;
@@ -26,13 +27,15 @@
       screen and (min-resolution: 192dpi),
       screen and (min-resolution: 2dppx) {
       .hero {
-        background-image:linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)) url("../images/hero/herotab2x.jpg");
+        background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4))
+          url("../images/hero/herotab2x.jpg");
       }
     }
   }
-  
+
   @media screen and (min-width: 1200px) {
-    background-image:linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/deskimg.jpg");height: 600px;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/deskimg.jpg");
+    height: 600px;
     max-width: 1600px;
     padding: 200px 0;
     margin: 0 auto;
@@ -40,12 +43,12 @@
       screen and (min-resolution: 192dpi),
       screen and (min-resolution: 2dppx) {
       .hero {
-        background-image:linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)) url("../images/hero/deskimg2x.jpg");
+        background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4))
+          url("../images/hero/deskimg2x.jpg");
       }
     }
   }
 }
-
 
 .hero-titel {
   display: inline-block;
@@ -72,7 +75,7 @@
   display: block;
   padding: 10px, 32px;
   cursor: pointer;
-  
+
   width: 200px;
   height: 50px;
   // left: 700px;
